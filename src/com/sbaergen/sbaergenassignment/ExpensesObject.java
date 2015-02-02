@@ -35,9 +35,9 @@ public class ExpensesObject implements Serializable{
 	
 	public String getDayString() {
 		return dayString;
-		
 	}
 
+	// Ensures Day is printed with 2 digits
 	public void setDayString(int day) {
 		if (day < 10)
 			this.dayString = "0"+day;
@@ -50,7 +50,7 @@ public class ExpensesObject implements Serializable{
 		return monthString;
 	}
 
-
+	// Ensures Month is printed with 2 digits
 	public void setMonthString(int month) {
 		if (month < 10)
 			this.monthString = "0"+month;
@@ -73,7 +73,6 @@ public class ExpensesObject implements Serializable{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		
 		String output;
 		if (currency.equals("GBP"))
 			output = name + "\n" + dayString + "-" + monthString + "-" + year + "\n" + "£" + costString + " " + currency;
