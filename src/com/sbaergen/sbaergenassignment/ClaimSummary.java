@@ -236,7 +236,7 @@ public class ClaimSummary extends Activity {
 		return sumExp;
 	}
 
-	
+	// From LonelyTwitterActivity by Abram Hindle
 	private ArrayList<ExpensesObject> loadExpFromFile() {
 		Gson gson = new Gson();
 		ArrayList<ExpensesObject> expList = new ArrayList<ExpensesObject>();
