@@ -98,7 +98,8 @@ public class Claims extends Activity {
 		claimListView.setAdapter(adapterViewClaim);
 		
 	}
-
+	
+	// From LonelyTwitterActivity by Abram Hindle
 	private ArrayList<ClaimsObject> loadFromFile() {
 		Gson gson = new Gson();
 		ArrayList<ClaimsObject> claimList = new ArrayList<ClaimsObject>();
