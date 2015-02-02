@@ -52,6 +52,7 @@ public class ClaimsObject implements Serializable{
 		return fromMonthString;
 	}
 
+	// Ensures all Months are printed with 2 digits
 	public void setFromMonthString(int fromMonth) {
 		if (fromMonth < 10)
 			this.fromMonthString = "0"+fromMonth;
@@ -62,7 +63,8 @@ public class ClaimsObject implements Serializable{
 	public String getFromDayString() {
 		return fromDayString;
 	}
-
+	
+	// Ensures all Days are printed with 2 digits
 	public void setFromDayString(int fromDay) {
 		if (fromDay < 10)
 			this.fromDayString = "0"+fromDay;
