@@ -48,8 +48,8 @@ public class EditClaims extends Activity {
 	private Button submit;
 	private ClaimsObject claimEdit;
 	private ArrayList<ClaimsObject> claimEditList;
-	private ArrayList<ExpensesObject> sumExp;
-	private ArrayList<ExpensesObject> expList;
+	private ArrayList<ExpensesObject> sumExp; // Expenses of claim
+	private ArrayList<ExpensesObject> expList; // All expenses
 	private DatePickerDialog toDatePickerEdit;
 	private DatePickerDialog fromDatePickerEdit;
 	private boolean validInput;
@@ -79,6 +79,7 @@ public class EditClaims extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				// Checks of input is valid. If it is then it saves the claim.
 				validInput = true;
 				try {
 					claimEdit.name = claimNameEdit.getText().toString();
