@@ -1,4 +1,5 @@
 # sbaergenAssignment1
+Use sbaergenAssignment.apk
 Video Demonstration at: http://youtu.be/azDJx-TMMZA
 
 #Licences
