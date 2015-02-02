@@ -92,6 +92,7 @@ public class Claims extends Activity {
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
+		//Update ListView
 		claimList = loadFromFile();
 		adapterViewClaim = new ArrayAdapter<ClaimsObject>(this,
 				R.layout.claim_view, claimList);
