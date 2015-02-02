@@ -72,7 +72,6 @@ public class Expenses extends Activity {
 				// TODO Auto-generated method stub
 				Bundle bundle = new Bundle();
 				bundle.putSerializable("expList", expList);
-				Log.v("LISTCHECK", expList.size() + "THIS IS THE SIZE OF THE ARRAY");
 				editExp.putExtras(bundle);
 				editExp.putExtra("expId", position);
 				startActivity(editExp);
