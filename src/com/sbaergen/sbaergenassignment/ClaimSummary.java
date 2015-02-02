@@ -82,6 +82,7 @@ public class ClaimSummary extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				// Deletes claim from claimList, saves claimList, and goes to Claims
 				claimList.remove(id);
 				saveClaimInFile();
 				startActivity(sumBackInt);
@@ -92,6 +93,7 @@ public class ClaimSummary extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				// Goes back to Claims
 				startActivity(sumBackInt);
 			}
 		});
@@ -101,13 +103,16 @@ public class ClaimSummary extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				// If editable, go to EditClaim.class
 				if (claim.status.equals("In Progress")
 						|| claim.status.equals("Returned")) {
 					editClaim.putExtra("claimId", claim.id);
 					startActivity(editClaim);
 				}
+				// If it is approved don't go anywhere
 				else if (claim.status.equals("Approved"))
 					Toast.makeText(getApplicationContext(), "Cannot edit Approved Claim", Toast.LENGTH_SHORT).show();
+				// If it is Submitted go to subClaim
 				else{
 					subClaim.putExtra("claim", claim);
 					startActivity(subClaim);
@@ -120,6 +125,7 @@ public class ClaimSummary extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// TODO Auto-generated method stub
+				// Goes to EditExpense by sending sumExp and the position of the Expense
 				Bundle bundle = new Bundle();
 				bundle.putSerializable("expList", sumExp);
 				editExp.putExtras(bundle);
@@ -134,11 +140,13 @@ public class ClaimSummary extends Activity {
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
+		// Load list from previous intent
 		Intent sum = getIntent();
 		claimList = (ArrayList<ClaimsObject>) sum
 				.getSerializableExtra("sumList");
 		id = sum.getIntExtra("claimId", -2);
 		claim = claimList.get(id);
+		// Gets all expenses in date range
 		getExpenses(claim);
 		claim.id = id;
 		claimList.set(id, claim);
@@ -160,6 +168,7 @@ public class ClaimSummary extends Activity {
 		saveClaimInFile();
 	}
 
+	// Gets expenses in date range of Claim
 	private ArrayList<ExpensesObject> getExpenses(ClaimsObject claim) {
 		// TODO Auto-generated method stub
 		expList = loadExpFromFile();
@@ -214,6 +223,7 @@ public class ClaimSummary extends Activity {
 		return sumExp;
 	}
 
+	
 	private ArrayList<ExpensesObject> loadExpFromFile() {
 		Gson gson = new Gson();
 		ArrayList<ExpensesObject> expList = new ArrayList<ExpensesObject>();
