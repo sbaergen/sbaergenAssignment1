@@ -175,6 +175,7 @@ public class NewExpense extends Activity {
 		}
 	}
 
+	// From LonelyTwitterActivity by Abram Hindle
 	private ArrayList<ExpensesObject> loadFromFile() {
 		Gson gson = new Gson();
 		expList = new ArrayList<ExpensesObject>();
