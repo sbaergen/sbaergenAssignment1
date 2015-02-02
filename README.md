@@ -1,7 +1,7 @@
 # sbaergenAssignment1
 Video Demonstration at: http://youtu.be/azDJx-TMMZA
 
-
+#Licences
 Android Developers licence:
 http://creativecommons.org/licenses/by/4.0/legalcode
 
