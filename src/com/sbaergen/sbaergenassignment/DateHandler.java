@@ -24,7 +24,6 @@ import android.widget.EditText;
 
 public class DateHandler extends NewExpense {
 	
-	//private DatePickerDialog picker;
 	private static SimpleDateFormat dateFormatter;
 	static DatePickerDialog pickerHold;
 
