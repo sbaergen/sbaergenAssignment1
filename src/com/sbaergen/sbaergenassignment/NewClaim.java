@@ -175,7 +175,8 @@ public class NewClaim extends Activity {
 		obj.toMonth = Integer.parseInt(word.substring(3, 5));
 		obj.toYear = Integer.parseInt(word.substring(6));
 	}
-
+	
+	// From LonelyTwitterActivity by Abram Hindle
 	private ArrayList<ClaimsObject> loadFromFile() {
 		Gson gson = new Gson();
 		claimsList = new ArrayList<ClaimsObject>();
