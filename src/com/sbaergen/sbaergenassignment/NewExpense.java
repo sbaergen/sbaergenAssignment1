@@ -97,9 +97,9 @@ public class NewExpense extends Activity {
 		// TODO Auto-generated method stub
 		super.onStart();
 		expList = loadFromFile();
-
 	}
-
+	
+	// Checks id input is valid and then inserts the new Expense into expList based on date
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		try {
