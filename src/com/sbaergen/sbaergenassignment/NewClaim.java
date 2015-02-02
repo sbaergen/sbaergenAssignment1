@@ -45,9 +45,7 @@ public class NewClaim extends Activity {
 	private EditText claimFrom;
 	private EditText claimName;
 	private EditText claimDes;
-	// private ListView claimView;
 	private ArrayList<ClaimsObject> claimsList;
-	// private ArrayAdapter<String> adapter;
 	private DatePickerDialog toDatePicker;
 	private DatePickerDialog fromDatePicker;
 	private Button save;
@@ -60,7 +58,6 @@ public class NewClaim extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_claim);
 		Calendar.getInstance();
-		// claimView = (ListView)findViewById(R.id.listView1);
 		goBackNewClaim = new Intent(this, Claims.class);
 		claimsList = new ArrayList<ClaimsObject>();
 		claimTo = (EditText) findViewById(R.id.claimTo);
@@ -87,6 +84,7 @@ public class NewClaim extends Activity {
 	public void buttonListener() {
 		save.setOnClickListener(new OnClickListener() {
 
+			// Checks validity of Dates and inserts into claimsList based on sorted start date.
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -147,6 +145,7 @@ public class NewClaim extends Activity {
 							if (compare.fromDay>newClaim.fromDay)
 								break;
 						}
+						// Checks if at the end of the list
 						if (!insert.hasNext())
 							index++;
 						claimsList.add(index, newClaim);
