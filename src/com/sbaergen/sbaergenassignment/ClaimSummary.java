@@ -162,6 +162,7 @@ public class ClaimSummary extends Activity {
 		// Gets all expenses in date range
 		getExpenses(claim);
 		claim.id = id;
+		// Sets up EdiTexts
 		claimList.set(id, claim);
 		sumTitle.setText(claim.name);
 		sumCAD.setText("$" + CAD + "CAD");
@@ -198,6 +199,7 @@ public class ClaimSummary extends Activity {
 		toDay = claim.toDay;
 		toMonth = claim.toMonth;
 		toYear = claim.toYear;
+		// Finds all claims within date range
 		Iterator<ExpensesObject> it = expList.iterator();
 		while (it.hasNext()) {
 			exp = it.next();
@@ -217,7 +219,6 @@ public class ClaimSummary extends Activity {
 					if (exp.day < fromDay)
 						break;
 			}
-			Log.v("cur", "\\" + exp.currency + "//");
 			if (exp.currency.equals("CAD"))
 				CAD += exp.cost;
 			else if (exp.currency.equals("USD"))
