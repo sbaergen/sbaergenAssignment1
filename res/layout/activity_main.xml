@@ -1,0 +1,37 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01A9DB"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/sumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_x="77dp"
+        android:layout_y="100dp"
+        android:text="TravEx"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FF0040"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/claim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="114dp"
+        android:layout_y="202dp"
+        android:text="Claims" />
+
+    <Button
+        android:id="@+id/expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="144dp"
+        android:layout_x="107dp"
+        android:layout_y="280dp"
+        android:text="Expenses" />
+
+</AbsoluteLayout>

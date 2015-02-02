@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">sbaergenAssignment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_expenses">Expenses</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_claims">Claims</string>
+    <string name="title_activity_new_claim">NewClaim</string>
+    <string name="title_activity_new_expense">NewExpense</string>
+    <string name="title_activity_edit_expense">EditExpense</string>
+    <string name="title_activity_edit_claims">EditClaims</string>
+    <string name="title_activity_claim_summary">ClaimSummary</string>
+    <string name="title_activity_submitted_claim">SubmittedClaim</string>
+
+</resources>
