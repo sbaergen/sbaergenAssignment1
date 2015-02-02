@@ -199,6 +199,7 @@ public class EditExpense extends Activity {
 		obj.setMonthString(obj.month);
 	}
 
+	// From LonelyTwitterActivity by Abram Hindle
 	private void saveInFile() {
 		Gson gson = new Gson();
 		try {
