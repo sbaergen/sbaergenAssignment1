@@ -99,6 +99,7 @@ public class Expenses extends Activity {
 		
 	}
 
+	// From LonelyTwitterActivity by Abram Hindle
 	private ArrayList<ExpensesObject> loadFromFile() {
 		Gson gson = new Gson();
 		ArrayList<ExpensesObject> expList = new ArrayList<ExpensesObject>();
