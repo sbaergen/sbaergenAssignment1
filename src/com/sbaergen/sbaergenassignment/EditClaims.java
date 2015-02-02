@@ -192,6 +192,7 @@ public class EditClaims extends Activity {
 		claimDesEdit.setText(claimEdit.claimDes);
 	}
 
+	// From LonelyTwitterActivity by Abram Hindle
 	private ArrayList<ClaimsObject> loadFromFile() {
 		Gson gson = new Gson();
 		ArrayList<ClaimsObject> claimList = new ArrayList<ClaimsObject>();
@@ -302,6 +303,7 @@ public class EditClaims extends Activity {
 		return output;
 	}
 
+	// From LonelyTwitterActivity by Abram Hindle
 	private ArrayList<ExpensesObject> loadExpFromFile() {
 		Gson gson = new Gson();
 		ArrayList<ExpensesObject> expList = new ArrayList<ExpensesObject>();
