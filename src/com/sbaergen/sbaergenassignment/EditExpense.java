@@ -102,6 +102,7 @@ public class EditExpense extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				// Changes the edited Expense and inserts into the ArrayList based on Start Date
 				try {
 					expEdit.name = expNameEdit.getText().toString();
 					expEdit.description = expDesEdit.getText().toString();
@@ -149,6 +150,7 @@ public class EditExpense extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				// Delets the expense and returns to the list of Expenses
 				expList.remove(id);
 				saveInFile();
 				startActivity(goBackEdit);
